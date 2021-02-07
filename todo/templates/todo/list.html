@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="all-todo">
+    {% for todo in todos %}
+    <div class="single-todo">
+        <div class="controls">
+            <a href="{{ todo.id }}/update">Update</a>
+            <a href="{{ todo.id }}/delete">Delete</a>
+        </div>
+        <h2>{{todo.title}}</h2>
+        <small>Status: {{ todo.status }}</small>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}
